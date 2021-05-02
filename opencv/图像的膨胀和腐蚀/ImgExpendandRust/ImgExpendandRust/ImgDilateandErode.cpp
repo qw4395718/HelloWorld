@@ -10,9 +10,16 @@ using namespace cv;
 #define WK_FALSE 0
 #define WK_ERROR -1
 
+Mat src, dst, src_gray;
+int element_size = 3;
+int max_size = 16;
+char Output[] = "operate img";
+
+void CallBack_Demo(int ,void*);
+
 int main()
 {
-	Mat src, dst, src_gray;
+	
 	src = imread("pic.jpg");
 	if (!src.data)
 	{
@@ -21,27 +28,41 @@ int main()
 	}
 	dst = Mat::zeros(src.size(), src.type());
 	char Input[] = "original img";
-	char Output[] = "operate img";
+	
 	namedWindow(Input, CV_WINDOW_AUTOSIZE);
-	namedWindow(Output, CV_WINDOW_AUTOSIZE);
+
 	//灰度处理
 
-	if (src.channels() == 3)
+	/*if (src.channels() == 3)
 	{
 		cvtColor(src, src_gray, CV_BGR2GRAY);
-	}
+	}*/
+
 	//cout << dst.channels() << endl;
 	//Mat Kernel = getStructuringElement(MORPH_RECT,Size(5,5),Point(-1,-1));//存在问题？Size在操作中发挥什么作用
 	//erode(src, src, Kernel);//腐蚀操作
 
-	adaptiveThreshold(~src_gray, dst, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY, 15, -2);
-
+	//adaptiveThreshold(~src_gray, dst, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY, 15, -2);
 	imshow(Input, src);
-	imshow(Output, dst);
+	namedWindow(Output, CV_WINDOW_AUTOSIZE);
+	createTrackbar("Element rate:", Output, &element_size, max_size, CallBack_Demo);
+	CallBack_Demo(0,0);
+	
 	waitKey(0);
 	return 0;
 }
 
+
+void CallBack_Demo(int ,void*)
+{
+	int s = element_size * 2 - 1;
+	Mat structureElement = getStructuringElement(MORPH_RECT, Size(s, s), Point(-1, -1));
+	dilate(src,dst, structureElement, Point(-1, -1), 1);
+	erode(src, dst, structureElement);
+
+	imshow(Output, dst);
+	return;
+}
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
 // 调试程序: F5 或调试 >“开始调试”菜单
 

@@ -6,10 +6,12 @@
 using namespace std;
 using namespace cv;
 
+#define blur2 
+
 int main()
 {
-	Mat src, dst_blur,dst_Gaussblur;
-	src = imread("pic.jpg");
+	Mat src, dst;
+	src = imread("zaosheng.jpg");
 	if (!src.data)
 	{
 		cout << "could not load img..." << endl;
@@ -17,17 +19,37 @@ int main()
 	}
 	namedWindow("Input", CV_WINDOW_AUTOSIZE);
 	imshow("Input", src);
+#ifdef blur1
+	/* 均值模糊 */
+	Mat dst_blur, dst_Gaussblur;
 	//blur(src, dst_blur, Size(5, 5), Point(-1, -1));//size影响模糊的方向（X轴模糊，中心模糊，Y轴模糊）
 	GaussianBlur(src, dst_blur, Size(29, 29), 5, 5);//Size影响模糊的程度，正态分布的加权均值相较均值模糊更清晰（X轴模糊，中心模糊，Y轴模糊）
 	char Output1[] = "Img_blur";
 	namedWindow(Output1, CV_WINDOW_AUTOSIZE);
 	imshow(Output1, dst_blur);
-
+	/* 高斯模糊 */
 	GaussianBlur(src, dst_Gaussblur, Size(29, 29), 50000, 5);//sigmaX和sigmaY直观上影响（X轴模糊和Y轴模糊）
 	char Output2[] = "Img_Gaussblur";
 	namedWindow(Output2, CV_WINDOW_AUTOSIZE);
 	imshow(Output2, dst_Gaussblur);
+#endif
 
+#ifdef blur2
+	/* 中值模糊滤波 */
+	//中值滤波一般用于处理椒盐噪声，即像素点相差较大的点
+	/*medianBlur(src, dst,3);
+	char Img_median[] = "Img_median";
+	namedWindow(Img_median, CV_WINDOW_AUTOSIZE);
+	imshow(Img_median, dst);*/
+	/* 双边滤波 */
+	//双边滤波一般用于特定区间的模糊，通过限定模糊范围从而可以保留边缘的清晰度
+	bilateralFilter(src,dst,15,100,3);
+	Mat Kernel = (Mat_<int>(3, 3) << 0, -1, 0, -1, 5, -1, 0, -1, 0);
+	filter2D(dst, dst, -1, Kernel, Point(-1, -1), 0);
+	char Img_median[] = "Img_bilaterafile";
+	namedWindow(Img_median, CV_WINDOW_AUTOSIZE);
+	imshow(Img_median, dst);
+#endif
 	waitKey(0);
 }
 
