@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mat_objectOperation.cpp">
+    <ClCompile Include="..\..\..\基本阈值操作\THRESh.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
