@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\基本阈值操作\THRESh.cpp">
+    <ClCompile Include="..\..\..\各类算子和边缘处理\BorderOperate.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
