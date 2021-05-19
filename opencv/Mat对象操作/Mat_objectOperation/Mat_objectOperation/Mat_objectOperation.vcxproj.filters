@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\各类算子和边缘处理\BorderOperate.cpp">
+    <ClCompile Include="..\..\..\Canny边缘检测\Canny.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

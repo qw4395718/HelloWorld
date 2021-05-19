@@ -1,0 +1,1 @@
+要想使用createTrackbar，要先用namedspace()创建对应的窗口
