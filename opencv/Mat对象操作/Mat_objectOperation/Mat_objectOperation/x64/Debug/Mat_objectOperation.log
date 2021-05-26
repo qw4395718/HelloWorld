@@ -1,2 +1,25 @@
-﻿  Canny.cpp
+﻿  Hough.cpp
+c:\users\zyf\desktop\helloworld\helloworld\opencv\霍夫变换\hough.cpp(78): warning C4244: “参数”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+          and
+          [
+              _Tp=int
+          ]
+c:\users\zyf\desktop\helloworld\helloworld\opencv\霍夫变换\hough.cpp(78): warning C4244: “参数”: 从“_Tp”转换到“int”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+c:\users\zyf\desktop\helloworld\helloworld\opencv\霍夫变换\hough.cpp(79): warning C4244: “参数”: 从“_Tp”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=float
+          ]
+          and
+          [
+              _Tp=int
+          ]
   Mat_objectOperation.vcxproj -> C:\Users\ZYF\Desktop\HelloWorld\HelloWorld\opencv\Mat对象操作\Mat_objectOperation\x64\Debug\Mat_objectOperation.exe

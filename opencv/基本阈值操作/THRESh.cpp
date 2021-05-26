@@ -31,7 +31,7 @@ int main()
 
 	namedWindow(output_title, CV_WINDOW_AUTOSIZE);
 
-	createTrackbar("Threshold Value", output_title, &threshold_value, &threshold_maxValue, threshold_Demo);
+	createTrackbar("Threshold Value", output_title, &threshold_value, threshold_maxValue, threshold_Demo);
 	threshold_Demo(0, 0);
 
 #endif // 

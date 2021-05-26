@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Canny边缘检测\Canny.cpp">
+    <ClCompile Include="..\..\..\霍夫变换\Hough.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
