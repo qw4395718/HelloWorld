@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\霍夫变换\Hough.cpp">
+    <ClCompile Include="..\..\..\直方图相关\HistBackProject.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
