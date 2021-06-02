@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\直方图相关\HistBackProject.cpp">
+    <ClCompile Include="..\..\..\模板匹配\TemplateMatch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
