@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\模板匹配\TemplateMatch.cpp">
+    <ClCompile Include="..\..\..\凸包\ConvexHull.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
