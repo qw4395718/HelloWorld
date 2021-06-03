@@ -1,2 +1,7 @@
-﻿  Canny.cpp
-  Mat_objectOperation.vcxproj -> C:\Users\Administrator\Desktop\HelloWorld\HelloWorld\opencv\Mat对象操作\Mat_objectOperation\x64\Debug\Mat_objectOperation.exe
+﻿  ContoursDraw.cpp
+c:\users\zyf\desktop\helloworld\helloworld\opencv\轮廓周围绘制矩形框和圆形框\contoursdraw.cpp(66): warning C4244: “参数”: 从“_Ty”转换到“int”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+  Mat_objectOperation.vcxproj -> C:\Users\ZYF\Desktop\HelloWorld\HelloWorld\opencv\Mat对象操作\Mat_objectOperation\x64\Debug\Mat_objectOperation.exe

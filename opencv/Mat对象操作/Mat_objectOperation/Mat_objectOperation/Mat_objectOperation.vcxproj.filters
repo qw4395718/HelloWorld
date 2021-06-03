@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\凸包\ConvexHull.cpp">
+    <ClCompile Include="..\..\..\轮廓周围绘制矩形框和圆形框\ContoursDraw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
