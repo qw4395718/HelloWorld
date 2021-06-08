@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\点多边形测试\PointPolygonTest.cpp" />
+    <ClCompile Include="..\..\..\基于距离变换与分水岭的图像分割\ImageSegmentation.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

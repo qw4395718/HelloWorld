@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\点多边形测试\PointPolygonTest.cpp">
+    <ClCompile Include="..\..\..\基于距离变换与分水岭的图像分割\ImageSegmentation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
