@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\亚像素级别角点检测\CornerDetect.cpp">
+    <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\SURF\SURF.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

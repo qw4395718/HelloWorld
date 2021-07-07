@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\亚像素级别角点检测\CornerDetect.cpp" />
+    <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\SURF\SURF.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
