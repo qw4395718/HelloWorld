@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\SIFT\SIFT.cpp" />
     <ClCompile Include="..\..\..\..\OpencvFeatureExtraction\SURF\SURF.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
